@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import ComicContainer from './containers/ComicContainer'
 import CharacterContainer from './containers/CharacterContainer'
+import FormContainer from './containers/FormContainer'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <CharacterContainer />
           </Route>
           <Route path='/new'>
-            <h2>Create New</h2>
+            <FormContainer />
           </Route>
           <Route path='/'>
             <h2>Home</h2>

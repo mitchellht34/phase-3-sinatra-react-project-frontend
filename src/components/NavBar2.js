@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const style = {
-    width: "60%",
+    width: "30%",
     margin: "5% 0 1%",
     padding: "1em",
     textDecoration: "none",
@@ -17,7 +17,7 @@ const activeStyle = {
     color: "white"
 }
 
-function NavBar() {
+function NavBar2() {
 
     function mouseOver(e) {
         if(e.target.className != "active") {
@@ -36,14 +36,14 @@ function NavBar() {
 
     return (
         <div>
-            <NavLink
+            <NavLink 
                 onMouseOver={mouseOver}
                 onMouseLeave={mouseLeave}
                 activeStyle={activeStyle}
                 exact
                 style={style}
-                to="/">
-                    Home
+                to="/new/comic">
+                    Comic
             </NavLink>
             <NavLink 
                 onMouseOver={mouseOver}
@@ -51,29 +51,11 @@ function NavBar() {
                 activeStyle={activeStyle}
                 exact
                 style={style}
-                to="/comics">
-                    Comics
-            </NavLink>
-            <NavLink 
-                onMouseOver={mouseOver}
-                onMouseLeave={mouseLeave}
-                activeStyle={activeStyle}
-                exact
-                style={style}
-                to="/characters">
-                    Characters
-            </NavLink>
-            <NavLink 
-                onMouseOver={mouseOver}
-                onMouseLeave={mouseLeave}
-                activeStyle={activeStyle}
-                exact
-                style={style}
-                to="/new">
-                    New
+                to="/new/character">
+                    Character
             </NavLink>
         </div>
     )
 }
 
-export default NavBar;
+export default NavBar2;
