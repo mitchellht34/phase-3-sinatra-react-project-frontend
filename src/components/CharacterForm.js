@@ -1,7 +1,7 @@
 import { useState } from "react";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
-function CharacterForm(){
+function CharacterForm() {
     const [character, setCharacter] = useState({
         name: "",
         alterEgo: "",
@@ -20,7 +20,7 @@ function CharacterForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-    
+
         const newCharacter = {
             name: character.name,
             alterEgo: character.alterEgo,
@@ -35,17 +35,22 @@ function CharacterForm(){
             },
             body: JSON.stringify(newCharacter)
         })
-        .then(() => history.push("/characters"))
-
+            .then(() => setCharacter({
+                name: "",
+                alterEgo: "",
+                description: "",
+                powers: ""
+            })
+            )
     }
 
 
     return (
         <div>
-           <h3>Create a New Character</h3>
+            <h3>Create a New Character</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name: </label>
-                <input onChange={handleChange} type="text" name="name" value={character.name} required/>
+                <input onChange={handleChange} type="text" name="name" value={character.name} required />
                 <br />
                 <label htmlFor="alterEgo">Alter Ego: </label>
                 <input onChange={handleChange} type="text" name="alterEgo" value={character.alterEgo} />

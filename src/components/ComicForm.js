@@ -1,7 +1,7 @@
 import { useState } from "react";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
-function ComicForm(){
+function ComicForm() {
     const [comic, setComic] = useState({
         title: "",
         publisher: "",
@@ -23,7 +23,7 @@ function ComicForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-    
+
         const newComic = {
             title: comic.title,
             publisher: comic.publisher,
@@ -41,17 +41,25 @@ function ComicForm(){
             },
             body: JSON.stringify(newComic)
         })
-        .then(() => history.push("/comics"))
-
+            .then(() => setComic({
+                title: "",
+                publisher: "",
+                issues: "",
+                releaseDate: "",
+                synopsis: "",
+                writer: "",
+                artist: ""
+            })
+            )
     }
 
 
     return (
         <div>
-           <h3>Create a New Comic</h3>
+            <h3>Create a New Comic</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title: </label>
-                <input onChange={handleChange} type="text" name="title" value={comic.title} required/>
+                <input onChange={handleChange} type="text" name="title" value={comic.title} required />
                 <br />
                 <label htmlFor="publisher">Publisher: </label>
                 <input onChange={handleChange} type="text" name="publisher" value={comic.publisher} />
@@ -63,7 +71,7 @@ function ComicForm(){
                 <input onChange={handleChange} type="number" name="releaseDate" value={comic.releaseDate} />
                 <br />
                 <label htmlFor="synopsis">Synopsis: </label>
-                <input onChange={handleChange} type="text" name="synopsis" value={comic.synopsis} required/>
+                <input onChange={handleChange} type="text" name="synopsis" value={comic.synopsis} required />
                 <br />
                 <label htmlFor="writer">Writer: </label>
                 <input onChange={handleChange} type="text" name="writer" value={comic.writer} />
