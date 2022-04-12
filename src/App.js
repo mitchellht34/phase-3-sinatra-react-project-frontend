@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavBar from './components/NavBar'
-import Comic from './components/Comic'
+import ComicContainer from './containers/ComicContainer'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <h1>Welcome to My Ever Expanding Comic Database</h1>
         <Switch>
           <Route path='/comics'>
-            <Comic />
+            <ComicContainer />
           </Route>
           <Route path='/characters'>
             <h2>Character Info</h2>
