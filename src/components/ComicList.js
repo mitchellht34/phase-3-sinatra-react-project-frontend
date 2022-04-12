@@ -6,3 +6,5 @@ function ComicList() {
         </div>
     )
 }
+
+export default ComicList;
