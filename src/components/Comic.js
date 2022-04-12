@@ -1,7 +1,12 @@
-function Comic({comic}) {
+function Comic({id, title, publisher, issues, release_date, synopsis, artist, writer, character_id }) {
 
     return (
-        <h2>My Comics</h2>
+        <div>
+            <h2>Comic</h2>
+            <div>
+                
+            </div>
+        </div>
     )
 }
 

@@ -25,8 +25,10 @@ function ComicContainer() {
     
 
     return (
-        <ComicList comics={comics} />
-    )
+        <div>
+            <ComicList comics={comics} />
+        </div>
+        )
 }
 
 export default ComicContainer;
