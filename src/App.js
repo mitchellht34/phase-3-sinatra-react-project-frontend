@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import ComicContainer from './containers/ComicContainer'
+import CharacterContainer from './containers/CharacterContainer'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <ComicContainer />
           </Route>
           <Route path='/characters'>
-            <h2>Character Info</h2>
+            <CharacterContainer />
           </Route>
           <Route path='/new'>
             <h2>Create New</h2>

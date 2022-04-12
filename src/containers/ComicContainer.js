@@ -25,7 +25,6 @@ function ComicContainer() {
     
 
     function handleDelete(id){
-        console.log(id)
         fetch(`http://localhost:9292/comics/${id}`, {
             method: 'DELETE'
         })
