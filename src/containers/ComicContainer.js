@@ -24,9 +24,18 @@ function ComicContainer() {
     if(loading) return <h1>Loading...</h1>
     
 
+    function handleDelete(id){
+        console.log(id)
+        fetch(`http://localhost:9292/comics/${id}`, {
+            method: 'DELETE'
+        })
+        .then(resp => resp.json())
+        .then(deleted => setComics(comics.filter(comic => comic.id !== deleted.id)))
+    }
+
     return (
         <div>
-            <ComicList comics={comics} />
+            <ComicList comics={comics} handleDelete={handleDelete}/>
         </div>
         )
 }
