@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import NavBar from './components/NavBar'
+import Comic from './components/Comic'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <h1>Welcome to My Ever Expanding Comic Database</h1>
         <Switch>
           <Route path='/comics'>
-            <h2>My Comics</h2>
+            <Comic />
           </Route>
           <Route path='/characters'>
             <h2>Character Info</h2>
