@@ -11,7 +11,6 @@ function FormContainer() {
         <div>
             <Router>
                 <h2>Let's Make Something New</h2>
-                <br />
                 <NavBar2 />
                 <Switch>
                     <Route path='/new/comic'>

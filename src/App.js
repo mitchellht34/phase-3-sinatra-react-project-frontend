@@ -5,13 +5,13 @@ import NavBar from './components/NavBar'
 import ComicContainer from './containers/ComicContainer'
 import CharacterContainer from './containers/CharacterContainer'
 import FormContainer from './containers/FormContainer'
+import Home from './components/Home'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <NavBar />
-        <h1>Welcome to My Ever Expanding Comic Database</h1>
         <Switch>
           <Route path='/comics'>
             <ComicContainer />
@@ -23,7 +23,7 @@ function App() {
             <FormContainer />
           </Route>
           <Route path='/'>
-            <h2>Home</h2>
+            <Home />
           </Route>
         </Switch>
       </Router>

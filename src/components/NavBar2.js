@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 const style = {
     width: "30%",
     margin: "5% 0 1%",
-    padding: "1em",
+    padding: "0.5em",
     textDecoration: "none",
     color: "black",
     backgroundColor: "yellow",
