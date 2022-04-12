@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavBar2 from '../components/NavBar2'
 import ComicForm from '../components/ComicForm'
