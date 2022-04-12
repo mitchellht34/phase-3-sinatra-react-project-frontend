@@ -67,7 +67,6 @@ function NavBar() {
                 onMouseOver={mouseOver}
                 onMouseLeave={mouseLeave}
                 activeStyle={activeStyle}
-                exact
                 style={style}
                 to="/new">
                     New
