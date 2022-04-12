@@ -69,8 +69,8 @@ function NavBar() {
                 activeStyle={activeStyle}
                 exact
                 style={style}
-                to="/comics/new">
-                    New Comic
+                to="/new">
+                    New
             </NavLink>
         </div>
     )

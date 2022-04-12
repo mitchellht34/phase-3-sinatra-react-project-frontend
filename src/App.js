@@ -8,15 +8,19 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
+        <h1>Welcome to My Ever Expanding Comic Database</h1>
         <Switch>
           <Route path='/comics'>
-            <h1>My Comics</h1>
+            <h2>My Comics</h2>
           </Route>
           <Route path='/characters'>
-            <h1>Characters I know about</h1>
+            <h2>Character Info</h2>
+          </Route>
+          <Route path='/new'>
+            <h2>Create New</h2>
           </Route>
           <Route path='/'>
-            <h1>Welcome to My Ever Expanding Comic Database</h1>
+            <h2>Home</h2>
           </Route>
         </Switch>
       </Router>
