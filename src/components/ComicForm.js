@@ -6,7 +6,7 @@ function ComicForm(){
         title: "",
         publisher: "",
         issues: "",
-        release_date: "",
+        releaseDate: "",
         synopsis: "",
         writer: "",
         artist: "",
@@ -48,7 +48,7 @@ function ComicForm(){
 
     return (
         <div>
-           <h3>Create a new Comic</h3>
+           <h3>Create a New Comic</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title: </label>
                 <input onChange={handleChange} type="text" name="title" value={comic.title} required/>
