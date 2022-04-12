@@ -1,10 +1,14 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import NavBar from './NavBar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my Comics</h1>
+      <Router>
+        <NavBar />
+      </Router>
     </div>
   );
 }
